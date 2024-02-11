@@ -4,6 +4,8 @@ using namespace std;
 #include "manQueue.h"
 #include "manStack.h"
 #include "BinTree.h"
+#include <cstdlib> 
+#include <ctime>   
 
 int main()
 {
@@ -42,6 +44,71 @@ int main()
     myStack.displayStack();
     myStack.pop();
     myStack.displayStack();
+
+   /* BinTree myBin;
+   
+    myBin.AddNode(2);
+    myBin.AddNode(1);
+    myBin.AddNode(3);
+    myBin.AddNode(4);
+    myBin.AddNode(5);
+    myBin.AddNode(6);
+    myBin.AddNode(7);
+    myBin.AddNode(8);
+    myBin.LevelOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+    myBin.PostOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+    myBin.PreOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+    myBin.InOrderTraverse(myBin.GetRoot());*/
+
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    BinTree myBin;
+
+
+    const int numberOfNodes = 8;
+    for (int i = 0; i < numberOfNodes; ++i)
+    {
+        int randomNumber = rand() % 100;
+        myBin.AddNode(randomNumber);
+    }
+
+    cout << "Level Order Traversal: ";
+    myBin.LevelOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    cout << "Post Order Traversal: ";
+    myBin.PostOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    cout << "Pre Order Traversal: ";
+    myBin.PreOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    cout << "In Order Traversal: ";
+    myBin.InOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    myBin.FlippyTheFlipFlop(myBin.GetRoot());
+
+    cout << "Level Order Traversal: ";
+    myBin.LevelOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    cout << "Post Order Traversal: ";
+    myBin.PostOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    cout << "Pre Order Traversal: ";
+    myBin.PreOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
+    cout << "In Order Traversal: ";
+    myBin.InOrderTraverse(myBin.GetRoot());
+    cout << "\n";
+
     return 0;
 }
 

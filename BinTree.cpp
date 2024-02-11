@@ -5,7 +5,7 @@ using namespace std;
 
 BinTree::BinTree()
 {
-
+    root = nullptr;
 }
 
 void BinTree::InOrderTraverse(Node* root)
@@ -108,7 +108,7 @@ int BinTree::DepthOfThePussy(Node* root)
 
 void BinTree::FlippyTheFlipFlop(Node* root)
 {
-    if (root == NULL)
+    if (root == nullptr)
     {
         return;
     }
@@ -116,6 +116,16 @@ void BinTree::FlippyTheFlipFlop(Node* root)
     temporaryNode = root->left;
     root->left = root->right;
     root->right = temporaryNode;
-    FlippyTheFlipFlop(root->right);
     FlippyTheFlipFlop(root->left);
+    FlippyTheFlipFlop(root->right);
+}
+
+void BinTree::AddNode(int value)
+{
+    root = AddNode(value, root);
+}
+
+BinTree::Node* BinTree::GetRoot() const
+{
+    return root;
 }
