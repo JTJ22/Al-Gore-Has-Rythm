@@ -32,6 +32,18 @@ void BinTree::PostOrderTraverse(Node* root)
     cout << root->data << " ";
 }
 
+void BinTree::PreOrderTraverse(Node* root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+
+    cout << root->data << " ";
+    PreOrderTraverse(root->left);
+    PreOrderTraverse(root->right);
+}
+
 void BinTree::LevelOrderTraverse(Node* root)
 {
     if (root == NULL)
