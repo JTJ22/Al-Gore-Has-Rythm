@@ -91,6 +91,7 @@ int main()
     myBin.InOrderTraverse(myBin.GetRoot());
     cout << "\n";
 
+    cout << "Flipping the flip flop\n";
     myBin.FlippyTheFlipFlop(myBin.GetRoot());
 
     cout << "Level Order Traversal: ";
