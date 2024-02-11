@@ -3,7 +3,8 @@
 
 #include "SingleLink.h"
 
-class LinkedList {
+class LinkedList
+{
 private:
     SingleLink* head;
 

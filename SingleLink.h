@@ -1,7 +1,8 @@
 #ifndef SINGLELINK_H
 #define SINGLELINK_H
 
-class SingleLink {
+class SingleLink
+{
 public:
     int info;
     SingleLink* nextLink;

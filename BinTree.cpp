@@ -10,7 +10,8 @@ BinTree::BinTree()
 
 void BinTree::InOrderTraverse(Node* root)
 {
-    if (root == NULL) {
+    if (root == NULL)
+    {
         return;
     }
 
@@ -21,7 +22,8 @@ void BinTree::InOrderTraverse(Node* root)
 
 void BinTree::PostOrderTraverse(Node* root)
 {
-    if (root == NULL) {
+    if (root == NULL)
+    {
         return;
     }
 
@@ -32,7 +34,8 @@ void BinTree::PostOrderTraverse(Node* root)
 
 void BinTree::LevelOrderTraverse(Node* root)
 {
-    if (root == NULL) {
+    if (root == NULL)
+    {
         return;
     }
     queue<Node*> q;
@@ -53,7 +56,8 @@ void BinTree::LevelOrderTraverse(Node* root)
 int BinTree::AmountOfNodes(Node* root)
 {
     int counter = 0;
-    if (root == NULL) {
+    if (root == NULL)
+    {
         return 0;
     }
     queue<Node*> q;
