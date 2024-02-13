@@ -31,7 +31,6 @@ int main()
     myQueue.push("Gutentagg");
     myQueue.displayQueue();
     myQueue.pop();
-    myQueue.pop();
     myQueue.displayQueue();
 
     manStack myStack;
@@ -91,7 +90,7 @@ int main()
     myBin.InOrderTraverse(myBin.GetRoot());
     cout << "\n";
 
-    cout << "Flipping the flip flop\n";
+   /* cout << "Flipping the flip flop\n";
     myBin.FlippyTheFlipFlop(myBin.GetRoot());
 
     cout << "Level Order Traversal: ";
@@ -108,8 +107,16 @@ int main()
 
     cout << "In Order Traversal: ";
     myBin.InOrderTraverse(myBin.GetRoot());
-    cout << "\n";
+    cout << "\n";*/
 
+    cout << "Delete a number:\n";
+    int numberToRemove;
+    cin >> numberToRemove;
+    myBin.DeleteNode(myBin.GetRoot(), numberToRemove);
+        
+    cout << "\nIn Order Traversal: ";
+    myBin.InOrderTraverse(myBin.GetRoot());
+    cout << "\n";
     return 0;
 }
 

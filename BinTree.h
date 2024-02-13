@@ -23,9 +23,13 @@ private:
 		}
 
 		if (value < root->data)
+		{
 			root->left = AddNode(value, root->left);
-		else
+		}
+		else if (value > root->data)
+		{
 			root->right = AddNode(value, root->right);
+		}
 
 		return root;
 	}
@@ -44,6 +48,7 @@ public:
 	int DepthOfThePussy(Node* root);
 	void FlippyTheFlipFlop(Node* root);
 	Node* GetRoot() const;
+	Node* DeleteNode(Node* root, int number);
 };
 
 #endif 

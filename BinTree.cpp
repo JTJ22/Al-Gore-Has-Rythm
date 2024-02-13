@@ -129,3 +129,49 @@ BinTree::Node* BinTree::GetRoot() const
 {
     return root;
 }
+
+BinTree::Node* BinTree::DeleteNode(Node* root, int k)
+{
+    if (root == NULL)
+    {
+        return root;
+    }
+    if (root->data > k)
+    {
+        root->left = DeleteNode(root->left, k);
+        return root;
+    }
+    else if (root->data < k)
+    {
+        root->right = DeleteNode(root->right, k);
+        return root;
+    }
+
+    else
+    {
+        if (root->left == NULL)
+        {
+            Node* temp = root->right;
+            free(root);
+            return temp;
+        }
+
+        else if (root->right == NULL)
+        {
+            Node* temp = root->left;
+            free(root);
+            return temp;
+        }
+        else
+        {
+            Node* temp = root->right;
+            while (temp->left != NULL)
+                temp = temp->left;
+
+            root->data = temp->data;
+
+            root->right = DeleteNode(root->right, temp->data);
+        }
+    }
+    return root;
+}
